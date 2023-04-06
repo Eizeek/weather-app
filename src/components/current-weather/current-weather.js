@@ -8,7 +8,11 @@ const CurrentWeather = ({ data }) => {
           <p className="city">{data.city}</p>
           <p className="weather-description">{data.weather[0].description}</p>
         </div>
-        <img alt="weather" className="weather-icon" src={`icons/${data.weather[0].icon}.png`} />
+        <img
+          alt="weather"
+          className="weather-icon"
+          src={`icons/${data.weather[0].icon}.png`}
+        />
       </div>
       <div className="bottom">
         <p className="temperature">{Math.floor(data.main.temp)}°C</p>
@@ -18,7 +22,9 @@ const CurrentWeather = ({ data }) => {
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Feels Like</span>
-            <span className="parameter-value">{Math.floor(data.main.feels_like)}°</span>
+            <span className="parameter-value">
+              {Math.floor(data.main.feels_like)}°
+            </span>
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Wind</span>
